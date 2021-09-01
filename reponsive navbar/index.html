@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav flex_row">
+            <div class="logo flex_row">
+                <a href="#">
+                    <img src="./images/bima-logo.jpeg" alt="">
+                </a>
+                <p>BMW</p>
+            </div>
+            <button class="btn" id="shownav">menu</button>
+        </nav>
+    </header>
+
+
+    <div class="navbar flex_row">
+        <div class="image-show">
+
+        </div>
+        <div class="links">
+            <ul class="flex_col">
+                <li><a href="#" id="series">series</a></li>
+                <li><a href="#" id="hood">front hood</a></li>
+                <li><a href="#" id="view">inner view</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="inner-content">
+            <h2>BMW ~ Comfortable driving <br> & <br> a speed-star.</h2>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          $("#series").hover(function(){
+            $(".image-show").css("background", "url(./images/image4.jpeg) no-repeat");
+            }, function(){
+                $(".image-show").css("background", "url(./images/image2.jpeg) no-repeat");
+            });
+
+            $("#hood").hover(function(){
+            $(".image-show").css("background", "url(./images/front.jpeg) no-repeat");
+            }, function(){
+                $(".image-show").css("background-color", "url(./images/image2.jpeg) no-repeat");
+            });
+
+            
+            $("#view").hover(function(){
+            $(".image-show").css("background", "url(./images/inner.jpeg) no-repeat");
+            }, function(){
+                $(".image-show").css("background-color", "url(./images/image2.jpeg) no-repeat");
+            });
+        });
+    </script>
+</body>
+</html>

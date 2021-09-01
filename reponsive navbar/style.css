@@ -1,0 +1,157 @@
+body{
+    font-family: sans-serif;
+    background: #f7f7f7;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.flex_row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flex_col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #000000;
+    z-index: 1000;
+}
+.nav{
+    min-height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .logo{
+    align-items: center;
+}
+
+.nav .logo p{
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+}
+
+.nav .logo a img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn{
+    outline: none;
+    color: #000000;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    letter-spacing: 1.1px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 1px solid #000000;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 10vw;
+    cursor: pointer;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    height: 100%;
+    width: 10vw;
+    border-left: 1px solid #000000;
+    transition-property: width;
+    transition-duration: 1000ms;
+    /* transition: width 1000ms; */
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+    z-index: 900;
+    overflow: hidden;
+}
+
+.navbar.active{
+    width: 90vw;
+}
+
+.image-show{
+    width: 60vw;
+    height: 100vh;
+    transition: .3s ease-in-out;
+    background: url(./images/image1.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.links{
+    width: 25vw;
+    height: 100vh;
+    position: relative;
+}
+
+.links ul{
+    top: 20%;
+    left: 5%;
+    position: absolute;
+}
+
+.links ul li{
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 1.3px;
+    padding: 2.5rem 0;
+}
+
+.links ul li a{
+    color: #000000;
+}
+
+
+.content{
+    min-height: 100vh;
+    background: url(./images/image1.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.inner-content{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+.inner-content h2{
+    font-size: 3.5rem;
+    color: yellow;
+    text-transform: capitalize;
+    line-height: 2;
+    text-align: center;
+}
